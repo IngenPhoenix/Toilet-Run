@@ -1,0 +1,6 @@
+extends Area2D
+
+func _on_Lever_body_entered(body):
+	if body.is_in_group("Player"):
+		$AnimationPlayer.play("LeverFlick")
+		$CollisionShape2D.queue_free()
